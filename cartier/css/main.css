@@ -1,0 +1,502 @@
+/* * {
+    outline: 1px solid #f00;
+} */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+
+
+body {
+    font-size: 15px;
+    /* font-family: 'fretendard'; */
+}
+
+.container {
+    width: 1700px;
+    margin: 0 auto;
+}
+
+
+.header_top {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.header_top h1 {
+    text-align: center;
+    height: 45px;
+}
+
+.header_top h1 img {
+    height: 45px;
+    width: auto;
+    text-align: center;
+}
+
+.Header .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.Header .na>li>a {
+    display: block;
+}
+
+.header_bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.header_bottom .container {
+    line-height: 70px;
+
+}
+
+.header_bottom .front_nav {
+    display: flex;
+    gap: 30px;
+    width: 300px;
+}
+
+.header_bottom .just_nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav>.just_nav>li {
+    position: relative;
+}
+
+
+nav>.just_nav>li::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #c10015;
+    transition: 0.5s;
+}
+
+nav>.just_nav>li:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.header_bottom .back_nav {
+    display: flex;
+    gap: 30px;
+    width: 300px;
+    justify-content: end;
+    margin: 0 0 0 40px;
+
+}
+
+.back_nav li i {
+    display: inline-block;
+    font-size: 19px;
+}
+
+.smenu {
+    display: none;
+    font-size: 13px;
+    line-height: 1;
+}
+
+/* -------------------------------------배경이요 */
+.main {}
+
+.main_visual {
+    position: relative;
+}
+
+.m_btn {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.m_btn .btn_white {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 0.025;
+}
+
+.btn_white a {
+    display: block;
+    padding: 15px 45px;
+
+}
+
+.m_btn .btn_red {
+    display: inline-block;
+    background: #c10015;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.025;
+
+}
+
+.btn_red a {
+    display: block;
+    padding: 15px 45px;
+}
+
+/* =-------------------------리프리젠트 */
+.represent {
+    padding: 100px 0;
+}
+
+.represent .what {
+    position: relative;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.represent .what img {
+    filter: invert(97%) sepia(1%) saturate(3366%) hue-rotate(187deg) brightness(118%) contrast(73%);
+    height: 70px;
+    width: auto;
+}
+
+.represent .r_txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.represent .r_txt h2 {
+    margin: 0 0 10px 0;
+}
+
+.represent .r_txt p {
+    font-size: 21px;
+    font-weight: 700;
+
+}
+
+
+
+.gallery {
+    --n: 1;
+    /* number of rows*/
+    --m: 4;
+    /* number of columns */
+    --f: .8;
+    /* control the scale factor */
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    height: 60vh;
+    grid-template-columns: repeat(var(--m), auto);
+}
+
+.gallery img {
+    border-radius: 20px;
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .5s linear;
+    margin: 0 0 35px 0;
+}
+
+.gallery>figure {
+    /* border-radius: 20px; */
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.gallery figure:hover {
+    width: calc(100vh*var(--f)/var(--n));
+    height: calc(100vw*var(--f)/var(--m));
+}
+
+.g_txt {
+    text-align: center;
+}
+
+.g_txt h3 {
+    position: relative;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+
+}
+
+.g_txt h3::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 30px;
+    width: 2px;
+    background: #c10015;
+}
+
+.g_txt p {
+    display: block;
+    margin: 0 0 10px 0;
+
+}
+
+
+/* --------------------------아트 */
+
+
+
+.art {
+    padding: 100px 0 0 0;
+    display: flex;
+    height: auto;
+    line-height: 1.4;
+}
+
+/* .art .a_left {
+    background: url(../img/art.jpg) no-repeat center center/cover;
+
+} */
+
+.art>* {
+    flex: 1;
+}
+
+.a_left img {
+    height: 450px;
+}
+
+.a_right {
+    background: #f2f2f2 url(../img/draw.jpg) no-repeat -50% -700%;
+
+}
+
+.art_txt {
+    padding: 100px;
+    text-align: center;
+}
+
+.art_txt h2 {
+    font-size: 29px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
+.art_txt p {
+    margin: 0 0 30px 0;
+}
+
+.art_txt a {
+    background: #000;
+    color: #f2f2f2;
+    /* border: 1px solid #000; */
+    padding: 10px 35px;
+}
+
+/* -----------------------------------------클래식 */
+.classic {
+    padding: 100px 0 50px 0;
+}
+
+.classic .what {
+    position: relative;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.classic .what img {
+    filter: invert(97%) sepia(1%) saturate(3366%) hue-rotate(187deg) brightness(118%) contrast(73%);
+    height: 70px;
+    width: auto;
+}
+
+.classic .r_txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.classic .r_txt h2 {
+    margin: 0 0 10px 0;
+}
+
+.classic .r_txt p {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.classic .container {
+    display: flex;
+    gap: 30px;
+}
+
+.classic figure {
+    border: 1px solid transparent;
+}
+
+.classic figure:hover {
+    border: 1px solid #999;
+}
+
+.classic figure .look {
+    opacity: 0;
+    padding: 7px 0;
+}
+
+.classic figure:hover .look {
+    background: #111;
+    color: #fff;
+    opacity: 1;
+}
+
+.look a {
+    display: block;
+}
+
+
+.cl_txt {
+    text-align: center;
+}
+
+.cl_txt h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+
+}
+
+.cl_txt strong {
+    display: inline-block;
+    font-size: 15px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.cl_txt p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+
+.classic .container img {
+    scale: 0.9;
+    overflow: hidden;
+
+}
+
+.classic .container img:hover {
+    scale: 1;
+    transition: 0.5s;
+}
+
+
+
+/* -----------------------------푸터 */
+
+
+.footer_top {
+    line-height: 80px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer_top ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+.footer_top img {
+    height: 35px;
+    width: auto;
+}
+
+.footer_m {
+    padding: 30px 0;
+    line-height: 1.4;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer_m .container {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.footer_m li {
+    line-height: 1.4;
+}
+
+.footer_m h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.footer_m .sns li {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 25px 0 0;
+}
+
+.footer_bt {
+    padding: 30px 0;
+}
+
+.footer_bt {
+    text-align: center;
+}
+
+.footer_bt .sub h5 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.footer_bt .sub input {
+    border: none;
+    width: 300px;
+    border-bottom: 1px solid #999;
+}
+
+.footer_bt .sub button {
+
+    padding: 5px 35px;
+    background: #000;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.footer_bt .sub button:hover {
+    padding: 5px 35px;
+    background: #fff;
+    border: 1px solid #333;
+    color: #000;
+}
