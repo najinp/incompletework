@@ -1,0 +1,376 @@
+/* *{
+    outline: 1px solid #f00;
+} */
+.header {}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .container {
+
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 130px;
+}
+
+/* .header nav {
+    margin: 0 auto 0 auto;
+}
+ */
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header nav>* {
+    flex: 1;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.header h1 a {
+    display: block;
+}
+
+.header nav>ul {
+    display: flex;
+    gap: 40px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.header nav>.navBack {
+    justify-content: flex-end;
+}
+
+.header nav>ul a {
+    display: block;
+
+}
+
+nav>ul>li {
+    position: relative;
+}
+
+nav>ul>li .smenu {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    width: 160px;
+    text-align: center;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #444;
+    /* border: 3px solid #369; */
+    line-height: 40px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav>ul>li:hover .smenu {
+    top: 120px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+
+
+
+
+
+.mainSlider {
+    height: 85vh;
+    width: 100%;
+}
+
+.mainSlider figure {
+    display: block;
+}
+
+.mainSlider .item01 {
+    background: url(../img/bg00.jpg) no-repeat center center/cover;
+    height: 85vh;
+}
+
+.mainSlider .item02 {
+    background: url(../img/bg02.jpeg) no-repeat center center/cover;
+    height: 85vh;
+}
+
+
+
+.mainSlider .slick-dots {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mainSlider .slick-dots li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin: 0 5px;
+    box-shadow: 0 0 3px #000;
+    opacity: 50%;
+
+}
+
+
+.mainSlider .slick-dots li.slick-active {
+    transition: 1s;
+    opacity: 90;
+}
+
+.mainSlider .slick-dots li button {
+    display: none;
+}
+
+
+.menu {
+    display: flex;
+    padding: 100px 0;
+}
+
+.menu .menuText {
+    position: relative;
+    width: 300px;
+}
+
+.menuArrow {
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+}
+
+.menuArrow i {
+    font-size: 10px;
+    padding: 5px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+
+.menu .menuSlider {
+    width: 900px;
+}
+
+
+.menu h2 span {
+    display: block;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.menuSlider figure img {
+    margin: 0 0 30px 0;
+}
+
+.menuSlider figure strong {
+    margin: 0 0 10px 0;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.menuSlider figure p {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 300;
+
+}
+
+.menuSlider figure span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #676767;
+
+}
+
+
+/* 인그리디언트 */
+
+.ingredient .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px;
+}
+
+
+.ingredient .inner>div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredient .inner #ingText {
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.ingredient .inner #ingText span {
+    display: block;
+}
+
+
+.ingredient .ingBean {
+    background: #033305;
+}
+
+.ingredient .ingBeet {
+    background: #dd9271;
+}
+
+.ingredient .ingCoconut {
+    background: #552d19;
+}
+
+.ingredient .ingPotato {
+    background: #304f4c;
+}
+
+.ingredient .ingStick {
+    background: #ccb983;
+}
+
+
+.ingredient .inner .innerText {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 1.4;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+
+}
+
+.ingredient .innerText h3 {
+    font-size: 31px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+
+}
+
+.ingredient .innerText p {
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+
+}
+
+.ingredient .innerText i {
+    font-size: 31px;
+    font-weight: 400;
+
+}
+
+
+.ingredient .inner>.ingBean:hover {
+    opacity: 0.7;
+}
+
+.ingredient .inner>.ingBeet:hover {
+    opacity: 0.7;
+}
+
+.ingredient .inner>.ingCoconut:hover {
+    opacity: 0.7;
+}
+
+.ingredient .inner>.ingPotato:hover {
+    opacity: 0.7;
+}
+
+.ingredient .inner>.ingStick:hover {
+    opacity: 0.7;
+}
+
+.ingredient .inner>div:hover .innerText {
+    opacity: 1;
+
+}
+
+.withUs {
+    padding: 100px 0;
+}
+
+.withUs h2 {
+    display: block;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+
+
+
+
+.footer {
+    /* padding: 100px 0; */
+    background: #222;
+    color: #999;
+    line-height: 1.4;
+    font-size: 15px;
+    padding: 50px 0;
+}
+
+.footer .footerTop ul>li>h3 {
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.footer .footerTop ul>li>ul>li {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.footer .container>ul {
+    justify-content: space-between;
+    display: flex;
+}
+
+.footer .container>ul>.goBeyond {
+    flex: 2;
+}
+
+.footer .container>ul>.footerBar {
+    flex: 1;
+}
+
+/* .footer .container>ul>.goBeyond>.icon {
+    display: flex;
+    gap: 10px;
+} */
+
+.footer .container>ul>.goBeyond>.haha {
+    margin: 0 0 50px 0;
+}
+
+.footer .container>ul>.goBeyond>.icon>li {
+    display: inline-block;
+    padding: 5px 8px;
+    border: 1px solid #999;
+    border-radius: 50%;
+
+}
