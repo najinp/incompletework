@@ -63,10 +63,40 @@ body {
     gap: 30px;
 }
 
+.header_bottom {
+    position: relative;
+    ;
+}
+
+nav>.just_nav>li .smenu {
+    display: none;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+}
+
+nav>.just_nav>li .smenu .smenubox {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+}
+
+nav>.just_nav>li:hover .smenu {
+    display: block;
+}
+
 nav>.just_nav>li {
     position: relative;
 }
 
+nav>.just_nav>li>ul {
+    display: none;
+}
 
 nav>.just_nav>li::after {
     content: "";
@@ -319,7 +349,7 @@ nav>.just_nav>li:hover::after {
 
 /* -----------------------------------------클래식 */
 .classic {
-    padding: 100px 0 50px 0;
+    padding: 100px 0;
 }
 
 .classic .what {
