@@ -8,6 +8,24 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.header_bottom').classList.toggle('on')
   })
 
+  const FT_LINK = document.querySelectorAll('.gnb .upmenu a')
+  const FT_CONTENT = document.querySelectorAll('.gnb .smenu')
+
+  FT_LINK.forEach((el, idx) => {
+    el.addEventListener('click', () => {
+      if (el.classList.contains('on')) {
+        el.classList.remove('on')
+        FT_CONTENT[idx].classList.remove('on')
+      } else {
+        FT_LINK.forEach(el => el.classList.remove('on'))
+        el.classList.add('on')
+        FT_CONTENT.forEach(el => el.classList.remove('on'))
+        FT_CONTENT[idx].classList.add('on')
+      }
+    })
+  })
+
+
   var artleft = new Swiper('.a_left', {
     loop: true,
     // autoplay: {

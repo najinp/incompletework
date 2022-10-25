@@ -133,7 +133,7 @@ body {
   position: relative;
 }
 
-.just_nav .upmenu > a::after {
+.just_nav .upmenu>a::after {
   display: block;
   content: '';
   position: absolute;
@@ -284,7 +284,7 @@ body {
   margin: 0 0 35px 0;
 }
 
-.gallery > figure {
+.gallery>figure {
   /* border-radius: 20px; */
   width: 0;
   height: 0;
@@ -344,7 +344,7 @@ body {
 
 } */
 
-.Art > * {
+.Art>* {
   flex: 1;
 }
 
@@ -493,7 +493,7 @@ body {
   gap: 50px;
 }
 
-.Personal .inner > * {
+.Personal .inner>* {
   flex: 1;
 }
 
@@ -514,6 +514,7 @@ body {
   border-bottom: 1px solid #000;
   width: 300px;
 }
+
 .per_input input {
   margin: 0 0 15px 0;
   width: 300px;
