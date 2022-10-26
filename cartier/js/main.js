@@ -36,10 +36,10 @@ window.addEventListener('DOMContentLoaded', () => {
     //     control: '.a_right'
     // },
     slidesPerView: 1,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: true,
+    // },
   })
 
   var artright = new Swiper('.a_right', {
