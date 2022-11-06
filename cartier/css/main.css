@@ -129,11 +129,20 @@ body {
   gap: 30px;
 }
 
-.just_nav .upmenu a {
+.just_nav .upmenu .bmenu span {
   position: relative;
+  justify-content: space-between;
 }
 
-.just_nav .upmenu>a::after {
+.just_nav .upmenu .bmenu i {
+  display: none;
+}
+
+.just_nav .upmenu .bmenu span {
+  cursor: pointer;
+}
+
+.just_nav .upmenu > .bmenu span::after {
   display: block;
   content: '';
   position: absolute;
@@ -146,7 +155,7 @@ body {
   transition: 0.5s;
 }
 
-.just_nav .upmenu a:hover::after {
+.just_nav .upmenu .bmenu span:hover::after {
   width: 100%;
 }
 
@@ -160,34 +169,40 @@ body {
 .header_bottom .back_nav i {
   font-size: 17px;
 }
+.header_bottom .back_nav span {
+  display: none;
+}
 
 .gnb .just_nav .upmenu .smenu {
-  display: none;
   position: absolute;
+  opacity: 0;
+  overflow: hidden;
   top: 70px;
   left: 0;
+  height: 0;
+  line-height: 40px;
   width: 100%;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background: #fff;
   z-index: 999;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .gnb .just_nav .smenu ul {
   display: flex;
   /* margin: 0 auto; */
   gap: 30px;
-  line-height: 40px;
   justify-content: center;
   font-size: 14px;
 }
 
 .gnb .just_nav .upmenu:hover .smenu {
-  display: block;
+  opacity: 1;
+  height: 40px;
 }
 
-/* -------------------------------------배경이요 */
+/* ------------------------------------메인이요 */
 
 .main_visual {
   position: relative;
@@ -256,6 +271,7 @@ body {
   text-align: center;
   margin: 0 0 30px 0;
   letter-spacing: 0.08;
+  line-height: 1.45;
 }
 
 .gallery {
@@ -284,7 +300,7 @@ body {
   margin: 0 0 35px 0;
 }
 
-.gallery>figure {
+.gallery > figure {
   /* border-radius: 20px; */
   width: 0;
   height: 0;
@@ -333,8 +349,10 @@ body {
 /* --------------------------아트 */
 
 .Art {
-  padding: 100px 0 0 0;
+  padding: 100px 0;
   display: flex;
+
+  flex-wrap: nowrap;
   height: auto;
   line-height: 1.4;
 }
@@ -344,17 +362,27 @@ body {
 
 } */
 
-.Art>* {
+.Art .a_left figure {
+  height: auto;
+}
+.Art .a_left {
+  height: auto;
+}
+
+.Art .a_left .itm01 {
+  background: url(../img/art.jpg) no-repeat center center/cover;
+}
+.Art .a_left .itm02 {
+  background: url(../img/maison.png) no-repeat center center/cover;
+}
+
+.Art > * {
   flex: 1;
 }
 
 /* .a_left {
   overflow: hidden;
 } */
-
-.a_left img {
-  height: 450px;
-}
 
 .a_right {
   background: #f2f2f2 url(../img/draw.jpg) no-repeat -50% -700%;
@@ -467,9 +495,51 @@ body {
   transition: 0.5s;
 }
 
-/* --------------------------- */
-.Personal {
+/* 부띠끄--------------------------- */
+.boutique {
   padding: 100px 0;
+}
+
+.fixed_bg {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3) url(../img/building.jpg) no-repeat fixed center
+    center/cover;
+  background-blend-mode: darken;
+  height: 370px;
+  text-align: center;
+  color: #fff;
+}
+
+.fixed_bg h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 3px #000;
+}
+.fixed_bg .bq_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed_bg p {
+  font-size: 31px;
+  text-shadow: 0 0 3px #000;
+  line-height: 1.45;
+  margin: 0 0 50px 0;
+}
+
+.fixed_bg a {
+  font-size: 15px;
+  background: #c10015;
+  color: #f2f2f2;
+  /* border: 1px solid #000; */
+  padding: 10px 35px;
+}
+/* --------------------------- 퍼스너ㅏㄹ*/
+.Personal {
+  padding: 0 0 100px 0;
   text-align: center;
 }
 
@@ -493,7 +563,7 @@ body {
   gap: 50px;
 }
 
-.Personal .inner>* {
+.Personal .inner > * {
   flex: 1;
 }
 
@@ -528,29 +598,6 @@ body {
   color: #f2f2f2;
   /* border: 1px solid #000; */
   padding: 10px 35px;
-}
-
-/* 부띠끄--------------------------- */
-.boutique {
-  padding: 100px 0;
-}
-
-.fixed_bg {
-  position: relative;
-  background: url(../img/building.jpg) no-repeat fixed center center/cover;
-  height: 370px;
-  text-align: center;
-  color: #fff;
-}
-
-.fixed_bg p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 31px;
-  font-weight: 700;
-  text-shadow: 0 0 3px #000;
 }
 
 /* -----------------------------푸터 */

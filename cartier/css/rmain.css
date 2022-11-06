@@ -1,6 +1,12 @@
 @media (max-width: 768px) {
+  br {
+    display: none;
+  }
+  figure {
+    box-sizing: border-box;
+  }
   body {
-    font-size: 15px;
+    font-size: 14px;
     /* font-family: 'fretendard'; */
   }
 
@@ -49,18 +55,17 @@
 
   .TopBanner .tbbtn {
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
   }
 
   /* -----------------------------헤더 */
-
   .Header {
     position: sticky;
     top: 0;
-    z-index: 999;
     background: #fff;
+    z-index: 999;
   }
 
   .header_top {
@@ -79,6 +84,18 @@
     display: inline-block;
     height: 45px;
     width: 155px;
+  }
+
+  .mopen {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  .mopen i {
+    font-size: 25px;
   }
 
   .header_bottom {
@@ -108,34 +125,32 @@
     line-height: 30px;
   }
 
-  .header_bottom .container>:nth-child(1) {
+  .header_bottom .container > :nth-child(1) {
     order: 1;
   }
 
-  .header_bottom .container>:nth-child(2) {
+  .header_bottom .container > :nth-child(2) {
     order: 3;
   }
 
-  .header_bottom .container>:nth-child(3) {
+  .header_bottom .container > :nth-child(3) {
     order: 2;
   }
 
-  .header_bottom .container>:nth-child(4) {
+  .header_bottom .container > :nth-child(4) {
     order: 4;
   }
-
-
   .header_bottom h1 {
-    display: block;
+    display: inline-block;
     height: 31px;
     text-align: center;
     margin: 0 0 30px 0;
   }
 
   .header_bottom h1 img {
-    display: inline-block;
+    display: block;
     height: 31px;
-    width: auto;
+    width: 100%;
   }
 
   .header_bottom .front_nav {
@@ -143,6 +158,7 @@
     flex-direction: column;
     gap: 2px;
     width: auto;
+    margin: 0 0 15px 0;
   }
 
   .gnb .just_nav {
@@ -151,81 +167,81 @@
     gap: 3px;
   }
 
-  .just_nav .upmenu a {
+  .just_nav .upmenu .bmenu span {
     position: relative;
+    justify-content: space-between;
   }
 
-  .just_nav .upmenu>a::after {
+  .just_nav .upmenu .bmenu i {
+    display: inline-block;
+  }
+
+  .just_nav .upmenu .bmenu span {
+    cursor: pointer;
+  }
+
+  .just_nav .upmenu > .bmenu span::after {
+    display: none;
     content: '';
     position: absolute;
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
     width: 0;
     height: 3px;
     background: #c10015;
     transition: 0.5s;
   }
 
-  .just_nav .upmenu a:hover::after {
+  .just_nav .upmenu .bmenu span:hover::after {
     display: none;
+    width: 100%;
   }
 
   .header_bottom .back_nav {
     display: flex;
     flex-direction: column;
     gap: 3px;
+    width: 300px;
+    justify-content: end;
   }
 
   .header_bottom .back_nav i {
     font-size: 17px;
   }
-
+  .header_bottom .back_nav span {
+    display: inline-block;
+  }
   .gnb .just_nav .upmenu .smenu {
-    display: none;
     position: static;
-    height: auto;
+    opacity: 0;
+    overflow: hidden;
+    top: 70px;
+    line-height: 30px;
     width: 100%;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background: #ddd;
     z-index: 999;
-    padding: 10px 20px;
+    transition: 0.5s;
   }
 
   .gnb .just_nav .smenu ul {
     display: flex;
     /* margin: 0 auto; */
     flex-direction: column;
-    gap: 10px;
-    line-height: 20px;
+    gap: 0px;
     justify-content: center;
     font-size: 14px;
   }
 
   .gnb .just_nav .upmenu:hover .smenu {
-    display: block;
+    opacity: 1;
+    height: auto;
+    padding: 10px 15px;
   }
 
-
-
-  .gnb .smenu.on {
-    display: block;
-  }
-
-
-
-
-
-
-
-
-  .mopen {
-    display: block;
-  }
-
-  /* -------------------------------------배경이요 */
+  /* ------------------------------------메인이요 */
 
   .main_visual {
     position: relative;
@@ -315,7 +331,7 @@
     margin: 0;
   }
 
-  .gallery>figure {
+  .gallery > figure {
     display: contents;
     /* border-radius: 20px; */
     width: 100%;
@@ -363,42 +379,54 @@
     font-weight: 400;
     line-height: 1.4;
   }
-
   /* --------------------------아트 */
-
   .Art {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+    padding: 0 0 100px 0;
+    display: block;
+    flex-wrap: nowrap;
     height: auto;
     line-height: 1.4;
-    overflow: hidden;
   }
 
   /* .Art .a_left {
-    background: url(../img/art.jpg) no-repeat center center/cover;
+      background: url(../img/art.jpg) no-repeat center center/cover;
+  
+  } */
 
-} */
-
-  .a_left img {
-    height: 200px;
-    width: 100vw;
-    object-fit: cover;
+  .Art .a_left figure {
+    height: 300px;
   }
 
-  .a_right {
-    background: #f2f2f2 url(../img/draw.jpg) no-repeat -50% -700%;
+  .Art .a_left {
     height: auto;
-    width: 100vw;
+  }
+
+  .Art .a_left .itm01 {
+    background: url(../img/art.jpg) no-repeat center center/cover;
+  }
+  .Art .a_left .itm02 {
+    background: url(../img/maison.png) no-repeat center center/cover;
+  }
+
+  .Art > * {
+    flex: 1;
+  }
+
+  /* .a_left {
+    overflow: hidden;
+  } */
+
+  .a_right {
+    background: #f2f2f2 url(../img/draw.jpg) no-repeat 25% -95%;
   }
 
   .art_txt {
-    padding: 50px;
+    padding: 50px 30px;
     text-align: center;
   }
 
   .art_txt h2 {
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 700;
     margin: 0 0 30px 0;
   }
@@ -412,22 +440,21 @@
     color: #f2f2f2;
     /* border: 1px solid #000; */
     padding: 10px 35px;
+    margin: 0 0 70px 0;
   }
 
   /* -----------------------------------------클래식 */
-  .Classic {
-    padding: 100px 0;
-  }
-
   .Classic .container {
     padding: 0 50px;
   }
 
   .Classic h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     font-size: 14px;
     margin: 0 0 10px 0;
-    letter-spacing: 5;
     text-align: center;
+    letter-spacing: 5;
   }
 
   .Classic p {
@@ -445,14 +472,15 @@
     font-weight: 700;
   }
 
-  /* .Classic .container {
-    display: flex;
-    gap: 30px;
-} */
-
   .Classic figure {
     border: 1px solid transparent;
+    box-sizing: border-box;
   }
+
+  /* .Classic .swiper-slide {
+  width: 258.33;
+  height: auto;
+} */
 
   .Classic figure:hover {
     border: 1px solid #999;
@@ -520,9 +548,51 @@
     background: #c10015;
   }
 
-  /* --------------------------- */
-  .Personal {
+  /* 부띠끄--------------------------- */
+  .boutique {
     padding: 100px 0;
+  }
+
+  .fixed_bg {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3) url(../img/building.jpg) no-repeat fixed
+      center center/cover;
+    background-blend-mode: darken;
+    height: 370px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .fixed_bg h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 3px #000;
+  }
+  .fixed_bg .bq_txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fixed_bg p {
+    font-size: 27px;
+    text-shadow: 0 0 3px #000;
+    line-height: 1.45;
+    margin: 0 0 50px 0;
+  }
+
+  .fixed_bg a {
+    font-size: 15px;
+    background: #c10015;
+    color: #f2f2f2;
+    /* border: 1px solid #000; */
+    padding: 10px 35px;
+  }
+  /* --------------------------- 퍼스너ㅏㄹ*/
+  .Personal {
+    padding: 0 0 100px 0;
     text-align: center;
   }
 
@@ -545,10 +615,10 @@
   .Personal .inner {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 0px;
   }
 
-  .Personal .inner>* {
+  .Personal .inner > * {
     flex: 1;
   }
 
@@ -585,30 +655,6 @@
     padding: 10px 35px;
   }
 
-  /* 부띠끄--------------------------- */
-  .boutique {
-    padding: 0;
-  }
-
-  .fixed_bg {
-    position: relative;
-    background: url(../img/building.jpg) no-repeat fixed center -50% -700%;
-    height: 370px;
-    text-align: center;
-    color: #fff;
-  }
-
-  .fixed_bg p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 31px;
-    font-weight: 700;
-    text-shadow: 0 0 3px #000;
-    line-height: 1.4;
-  }
-
   /* -----------------------------푸터 */
 
   .footer_top {
@@ -640,12 +686,8 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    /* justify-content: center; */
+    justify-content: space-between;
     text-align: center;
-  }
-
-  .footer_m ul {
-    margin: 0 0 30px 0;
   }
 
   .footer_m li {
