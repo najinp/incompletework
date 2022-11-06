@@ -17,14 +17,13 @@ window.addEventListener('DOMContentLoaded', () => {
         el.classList.remove('on')
         FT_CONTENT[idx].classList.remove('on')
       } else {
-        FT_LINK.forEach(el => el.classList.remove('on'))
+        FT_LINK.forEach((el) => el.classList.remove('on'))
         el.classList.add('on')
-        FT_CONTENT.forEach(el => el.classList.remove('on'))
+        FT_CONTENT.forEach((el) => el.classList.remove('on'))
         FT_CONTENT[idx].classList.add('on')
       }
     })
   })
-
 
   var artleft = new Swiper('.a_left', {
     loop: true,
@@ -81,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // when window width is >= 320px
 
       // when window width is >= 640px
-      768: {
+      769: {
         slidesPerView: 6,
         spaceBetween: 30,
       },
